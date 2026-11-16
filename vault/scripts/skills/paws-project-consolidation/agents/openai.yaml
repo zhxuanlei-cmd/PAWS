@@ -1,0 +1,6 @@
+interface:
+  display_name: "consolidate"
+  short_description: "PAWS 项目整理：认定正本、只移不删、复现验证并准备可审阅的提交范围"
+
+policy:
+  allow_implicit_invocation: false

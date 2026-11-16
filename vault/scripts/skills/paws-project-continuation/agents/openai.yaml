@@ -1,0 +1,7 @@
+interface:
+  display_name: "start"
+  short_description: "PAWS 手动开工：读取项目正本、核对现场并恢复下一步"
+  default_prompt: "Use $paws-project-continuation to resume this PAWS project safely from its canonical state."
+
+policy:
+  allow_implicit_invocation: false

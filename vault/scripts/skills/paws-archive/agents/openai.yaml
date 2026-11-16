@@ -1,0 +1,6 @@
+interface:
+  display_name: "archive"
+  short_description: "PAWS 项目归档：核对交付与遗留事项，在原路径记录项目结项"
+
+policy:
+  allow_implicit_invocation: false

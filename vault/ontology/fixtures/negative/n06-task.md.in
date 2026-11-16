@@ -1,0 +1,29 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: done
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-107
+title: 输入已漂移的 done WorkItem
+task_state: done
+generation: 3
+based_on: abc1234
+branch: codex/fx-20260804-107
+worktree_key: FX-20260804-107
+write_scope: [src/**]
+required_gates: [fast-tests]
+next_action: 重跑失效 gate
+claim: null
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Done task with stale evidence

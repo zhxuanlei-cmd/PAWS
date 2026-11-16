@@ -1,0 +1,29 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-106
+title: 非法 planned 直接 done
+task_state: planned
+generation: 1
+based_on: abc1234
+branch: codex/fx-20260804-106
+worktree_key: FX-20260804-106
+write_scope: [src/transition/**]
+required_gates: []
+next_action: 先获取 claim
+claim: null
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Forbidden direct completion

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paws.local/schema/1.1/experiment-summary.schema.json",
+  "$comment": "Compatibility/shadow schema only in v1.1; experiment is not a strict G1 ontology object.",
+  "type": "object",
+  "required": [
+    "type",
+    "project",
+    "status",
+    "created",
+    "updated",
+    "source",
+    "draft",
+    "exp_id",
+    "hypothesis",
+    "config",
+    "metrics",
+    "conclusion",
+    "data_version"
+  ],
+  "properties": {
+    "type": {"const": "experiment"},
+    "project": {"type": "string", "minLength": 1},
+    "status": {"enum": ["active", "paused", "done", "archived", "draft"]},
+    "created": {"type": "string"},
+    "updated": {"type": "string"},
+    "source": {"type": "string", "minLength": 1},
+    "draft": {"type": "boolean"},
+    "exp_id": {"type": "string", "minLength": 1},
+    "hypothesis": {"type": "string", "minLength": 1},
+    "config": {"type": ["object", "string"]},
+    "metrics": {"type": ["object", "array"]},
+    "conclusion": {"type": "string", "minLength": 1},
+    "data_version": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

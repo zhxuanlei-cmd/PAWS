@@ -1,0 +1,6 @@
+interface:
+  display_name: "inbox"
+  short_description: "PAWS 材料归位：按已确认批次分流材料，保留来源与未决归属"
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "checkpoint"
+  short_description: "PAWS 手动收工：保存本次事实、工作状态与项目交接信息"
+
+policy:
+  allow_implicit_invocation: false

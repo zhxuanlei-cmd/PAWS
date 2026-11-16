@@ -1,0 +1,10 @@
+action_id: ACT-20260804-106
+idempotency_key: fixture-n05
+action: complete_task
+actor: codex
+harness: codex-app
+device_id: fixture-device-01
+task_ref: task:FX-20260804-106
+expected_generation: 1
+expected_state: planned
+before_hash: sha256:1111111111111111111111111111111111111111111111111111111111111111

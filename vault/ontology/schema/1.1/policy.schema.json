@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paws.local/schema/1.1/policy.schema.json",
+  "type": "object",
+  "allOf": [
+    {"$ref": "common.schema.json#/$defs/common"},
+    {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "project_code",
+        "consistency_mode",
+        "data_class",
+        "allowed_harnesses",
+        "allowed_providers",
+        "max_parallel_write_tasks",
+        "auto_commit",
+        "auto_push",
+        "gates"
+      ],
+      "properties": {
+        "type": {"const": "policy"},
+        "policy_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,62}/[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"
+        },
+        "project_code": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{2,12}$"
+        },
+        "consistency_mode": {
+          "enum": ["local_strong", "online_optimistic", "offline_detect_only"]
+        },
+        "data_class": {
+          "enum": ["public", "internal", "confidential", "restricted"]
+        },
+        "allowed_harnesses": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "allowed_providers": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "max_parallel_write_tasks": {"type": "integer", "minimum": 1},
+        "auto_commit": {"const": false},
+        "auto_push": {"const": false},
+        "migration_mode": {
+          "enum": ["legacy", "shadow", "cutover"]
+        },
+        "gates": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "common.schema.json#/$defs/gate"
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,36 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-005
+title: 单一 active claim
+task_state: implementing
+generation: 2
+based_on: abc1234
+branch: codex/fx-20260804-005
+worktree_key: FX-20260804-005
+write_scope: [src/claim/**]
+required_gates: [fast-tests]
+next_action: 修改 claim 范围内文件
+claim:
+  claim_id: CLM-20260804-005
+  actor: codex
+  harness: codex-app
+  device_id: fixture-device-01
+  generation: 2
+  worktree_key: FX-20260804-005
+  acquired_at: 2026-08-04T00:30:00+08:00
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Single active claim

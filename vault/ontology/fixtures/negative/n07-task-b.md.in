@@ -1,0 +1,36 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-109
+title: 范围冲突 claim B
+task_state: implementing
+generation: 2
+based_on: abc1234
+branch: codex/fx-20260804-109
+worktree_key: FX-20260804-109
+write_scope: [src/shared/module/**]
+required_gates: [fast-tests]
+next_action: 编辑 shared module
+claim:
+  claim_id: CLM-20260804-109
+  actor: opencode
+  harness: opencode
+  device_id: fixture-device-01
+  generation: 2
+  worktree_key: FX-20260804-109
+  acquired_at: 2026-08-04T00:31:00+08:00
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Conflicting claim B

@@ -1,0 +1,78 @@
+manifest_version: 1
+contract: ../schema/1.1/common.schema.json
+schema_version: "1.1"
+fixed_now: "2026-08-04T01:00:00+08:00"
+path_base: ontology/fixtures
+shared_objects:
+  - _shared/repository.md.in
+  - _shared/policy.md.in
+error_precedence:
+  - E_PARSE
+  - E_SCHEMA
+  - E_ID_DUPLICATE
+  - E_LINK_TARGET_MISSING
+  - E_LINK_ENDPOINT_TYPE
+  - E_DEPENDENCY_CYCLE
+  - E_STATUS_DERIVATION
+  - E_TRANSITION_FORBIDDEN
+  - E_CLAIM_SCOPE_CONFLICT
+  - E_REQUIRED_GATE_MISSING
+  - E_EVIDENCE_STALE_INPUT
+cases:
+  - id: p01-minimal-planned-task
+    kind: positive
+    objects: [positive/p01-task.md.in]
+    expected: {valid: true, code: OK}
+  - id: p02-done-with-fresh-evidence
+    kind: positive
+    objects: [positive/p02-task.md.in, positive/p02-evidence.md.in]
+    repo_root: positive/p02-repo
+    environment_probe_results:
+      dependency-lock: "sha256:fixture-lock-v1"
+      fixture-runtime: fixture-runtime-1
+    expected: {valid: true, code: OK}
+  - id: p03-valid-dependency-dag
+    kind: positive
+    objects: [positive/p03-task-a.md.in, positive/p03-task-b.md.in]
+    expected: {valid: true, code: OK}
+  - id: p04-single-local-claim
+    kind: positive
+    objects: [positive/p04-task.md.in]
+    expected: {valid: true, code: OK}
+  - id: n01-duplicate-task-id
+    kind: negative
+    objects: [negative/n01-task-a.md.in, negative/n01-task-b.md.in]
+    expected: {valid: false, code: E_ID_DUPLICATE}
+  - id: n02-dangling-link
+    kind: negative
+    objects: [negative/n02-task.md.in]
+    expected: {valid: false, code: E_LINK_TARGET_MISSING}
+  - id: n03-dependency-cycle
+    kind: negative
+    objects: [negative/n03-task-a.md.in, negative/n03-task-b.md.in]
+    expected: {valid: false, code: E_DEPENDENCY_CYCLE}
+  - id: n04-status-derivation-mismatch
+    kind: negative
+    objects: [negative/n04-task.md.in]
+    expected: {valid: false, code: E_STATUS_DERIVATION}
+  - id: n05-forbidden-transition
+    kind: negative
+    objects: [negative/n05-task.md.in]
+    action_request: negative/n05-action.yaml
+    expected: {valid: false, code: E_TRANSITION_FORBIDDEN}
+  - id: n06-stale-evidence-input
+    kind: negative
+    objects: [negative/n06-task.md.in, negative/n06-evidence.md.in]
+    repo_root: negative/n06-repo
+    environment_probe_results:
+      dependency-lock: "sha256:fixture-lock-v1"
+      fixture-runtime: fixture-runtime-1
+    expected: {valid: false, code: E_EVIDENCE_STALE_INPUT}
+  - id: n07-overlapping-active-claims
+    kind: negative
+    objects: [negative/n07-task-a.md.in, negative/n07-task-b.md.in]
+    expected: {valid: false, code: E_CLAIM_SCOPE_CONFLICT}
+  - id: n08-done-without-required-gate
+    kind: negative
+    objects: [negative/n08-task.md.in]
+    expected: {valid: false, code: E_REQUIRED_GATE_MISSING}

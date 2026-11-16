@@ -1,0 +1,6 @@
+interface:
+  display_name: "reflect"
+  short_description: "PAWS 记忆整固：核对重复与冲突，整理稳定偏好及复用候选"
+
+policy:
+  allow_implicit_invocation: false

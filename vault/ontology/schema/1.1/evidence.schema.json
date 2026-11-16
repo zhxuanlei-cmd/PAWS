@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paws.local/schema/1.1/evidence.schema.json",
+  "type": "object",
+  "allOf": [
+    {"$ref": "common.schema.json#/$defs/common"},
+    {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "gate_id",
+        "gate_spec_version",
+        "result",
+        "executed_at",
+        "based_on",
+        "input_digest",
+        "command_digest",
+        "environment_digest",
+        "exit_code",
+        "log_ref",
+        "log_digest",
+        "valid_until",
+        "links"
+      ],
+      "properties": {
+        "type": {"const": "evidence"},
+        "evidence_id": {
+          "type": "string",
+          "pattern": "^EVD-[0-9]{8}-[0-9]{3,}$"
+        },
+        "gate_id": {"type": "string", "minLength": 1},
+        "gate_spec_version": {"type": "integer", "minimum": 1},
+        "result": {"enum": ["passed", "failed"]},
+        "executed_at": {"type": "string", "minLength": 1},
+        "based_on": {"type": "string", "minLength": 1},
+        "input_digest": {"$ref": "common.schema.json#/$defs/digest"},
+        "command_digest": {"$ref": "common.schema.json#/$defs/digest"},
+        "environment_digest": {"$ref": "common.schema.json#/$defs/digest"},
+        "exit_code": {"type": "integer"},
+        "log_ref": {"$ref": "common.schema.json#/$defs/relativePath"},
+        "log_digest": {"$ref": "common.schema.json#/$defs/digest"},
+        "valid_until": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "minLength": 1}
+          ]
+        },
+        "links": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "common.schema.json#/$defs/link"}
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

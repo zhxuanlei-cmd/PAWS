@@ -1,0 +1,4 @@
+interface:
+  display_name: "PAWS AI Experiment"
+  short_description: "建立可复现、可比较、可追溯的AI算法实验，并记录配置、指标和结论"
+  default_prompt: "Use $paws-ai-experiment to design, run, compare, and record this AI experiment."

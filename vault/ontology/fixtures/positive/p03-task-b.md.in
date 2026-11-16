@@ -1,0 +1,31 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-004
+title: DAG 后续任务
+task_state: planned
+generation: 1
+based_on: abc1234
+branch: codex/fx-20260804-004
+worktree_key: FX-20260804-004
+write_scope: [src/b/**]
+required_gates: [fast-tests]
+next_action: 等待 A
+claim: null
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+  - rel: depends_on
+    target: task:FX-20260804-003
+---
+
+# DAG task B

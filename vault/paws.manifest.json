@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "managed_by": "paws_setup",
+  "global_instructions": {
+    "source": "scripts/adapters/global-instructions.md",
+    "targets": [
+      "$HOME/.codex/AGENTS.md",
+      "$HOME/.config/opencode/AGENTS.md",
+      "$HOME/.claude/CLAUDE.md",
+      "$HOME/.gemini/GEMINI.md"
+    ]
+  },
+  "commands": [
+    {
+      "name": "start",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/start.md",
+          "target": "$HOME/.codex/prompts/start.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/start.md",
+          "target": "$HOME/.config/opencode/commands/start.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/start.md",
+          "target": "$HOME/.claude/commands/start.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/start",
+          "target": "$HOME/.gemini/config/skills/start"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/paws-start",
+          "target": "$HOME/.hermes/skills/paws-start"
+        }
+      ]
+    },
+    {
+      "name": "checkpoint",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/checkpoint.md",
+          "target": "$HOME/.codex/prompts/checkpoint.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/checkpoint.md",
+          "target": "$HOME/.config/opencode/commands/checkpoint.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/checkpoint.md",
+          "target": "$HOME/.claude/commands/checkpoint.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/checkpoint",
+          "target": "$HOME/.gemini/config/skills/checkpoint"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/checkpoint",
+          "target": "$HOME/.hermes/skills/checkpoint"
+        }
+      ]
+    },
+    {
+      "name": "inbox",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/inbox.md",
+          "target": "$HOME/.codex/prompts/inbox.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/inbox.md",
+          "target": "$HOME/.config/opencode/commands/inbox.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/inbox.md",
+          "target": "$HOME/.claude/commands/inbox.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/inbox",
+          "target": "$HOME/.gemini/config/skills/inbox"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/inbox",
+          "target": "$HOME/.hermes/skills/inbox"
+        }
+      ]
+    },
+    {
+      "name": "reflect",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/reflect.md",
+          "target": "$HOME/.codex/prompts/reflect.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/reflect.md",
+          "target": "$HOME/.config/opencode/commands/reflect.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/reflect.md",
+          "target": "$HOME/.claude/commands/reflect.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/reflect",
+          "target": "$HOME/.gemini/config/skills/reflect"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/reflect",
+          "target": "$HOME/.hermes/skills/reflect"
+        }
+      ]
+    },
+    {
+      "name": "harvest",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/harvest.md",
+          "target": "$HOME/.codex/prompts/harvest.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/harvest.md",
+          "target": "$HOME/.config/opencode/commands/harvest.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/harvest.md",
+          "target": "$HOME/.claude/commands/harvest.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/harvest",
+          "target": "$HOME/.gemini/config/skills/harvest"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/harvest",
+          "target": "$HOME/.hermes/skills/harvest"
+        }
+      ]
+    },
+    {
+      "name": "archive",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/archive.md",
+          "target": "$HOME/.codex/prompts/archive.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/archive.md",
+          "target": "$HOME/.config/opencode/commands/archive.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/archive.md",
+          "target": "$HOME/.claude/commands/archive.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/archive",
+          "target": "$HOME/.gemini/config/skills/archive"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/archive",
+          "target": "$HOME/.hermes/skills/archive"
+        }
+      ]
+    },
+    {
+      "name": "consolidate",
+      "links": [
+        {
+          "source": "scripts/adapters/commands/codex/consolidate.md",
+          "target": "$HOME/.codex/prompts/consolidate.md"
+        },
+        {
+          "source": "scripts/adapters/commands/opencode/consolidate.md",
+          "target": "$HOME/.config/opencode/commands/consolidate.md"
+        },
+        {
+          "source": "scripts/adapters/commands/claude/consolidate.md",
+          "target": "$HOME/.claude/commands/consolidate.md"
+        },
+        {
+          "source": "scripts/adapters/antigravity/skills/consolidate",
+          "target": "$HOME/.gemini/config/skills/consolidate"
+        },
+        {
+          "source": "scripts/adapters/hermes/skills/consolidate",
+          "target": "$HOME/.hermes/skills/consolidate"
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "source_root": "scripts/skills",
+    "names": [
+      "paws-ai-experiment",
+      "paws-checkpoint",
+      "paws-harvest",
+      "paws-inbox",
+      "paws-office-delivery",
+      "paws-project-continuation",
+      "paws-reflect",
+      "paws-archive",
+      "paws-project-consolidation"
+    ],
+    "target_roots": [
+      "$HOME/.agents/skills",
+      "$HOME/.config/opencode/skills",
+      "$HOME/.claude/skills",
+      "$HOME/.gemini/config/skills",
+      "$HOME/.hermes/skills"
+    ]
+  },
+  "adapters": [
+    {
+      "name": "opencode-launcher",
+      "source": "scripts/adapters/opencode/launcher.zsh",
+      "target": "$HOME/.local/bin/paws-opencode"
+    },
+    {
+      "name": "opencode-tools",
+      "source": "scripts/adapters/opencode/paws-tools.ts",
+      "target": "$HOME/.config/opencode/plugins/paws-tools.ts"
+    },
+    {
+      "name": "hermes-context",
+      "source": "scripts/adapters/hermes/skills/paws-context",
+      "target": "$HOME/.hermes/skills/paws-context"
+    }
+  ],
+  "device_map": "$HOME/.config/paws-oss/device.json",
+  "state_root": "$HOME/.local/state/paws-oss",
+  "manual_workflows": [
+    "paws-project-continuation",
+    "paws-checkpoint",
+    "paws-inbox",
+    "paws-reflect",
+    "paws-harvest",
+    "paws-archive"
+  ],
+  "manual_invocation_skills": [
+    "paws-project-continuation",
+    "paws-checkpoint",
+    "paws-inbox",
+    "paws-reflect",
+    "paws-harvest",
+    "paws-archive",
+    "paws-project-consolidation"
+  ],
+  "hermes_config": {
+    "target": "$HOME/.hermes/config.yaml",
+    "bootstrap_skill": "paws-context",
+    "aliases": {
+      "start": "paws-start"
+    }
+  }
+}

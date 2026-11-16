@@ -1,0 +1,20 @@
+---
+schema_version: "1.1"
+type: repository
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+repo_id: fixture-project/code
+default_branch: main
+path_hint: ./repo
+data_class: internal
+links:
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Fixture Repository

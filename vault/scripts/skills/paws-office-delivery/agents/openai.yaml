@@ -1,0 +1,4 @@
+interface:
+  display_name: "PAWS Office Delivery"
+  short_description: "组织方案论证，按项目要求制作Word、PPT和表格，完成结构与逐页视觉验收"
+  default_prompt: "Use $paws-office-delivery to write or revise this Office deliverable using the project requirements and verify the final file."

@@ -1,0 +1,31 @@
+---
+schema_version: "1.1"
+type: evidence
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+evidence_id: EVD-20260804-002
+gate_id: fast-tests
+gate_spec_version: 1
+result: passed
+executed_at: 2026-08-04T00:40:00+08:00
+based_on: abc1234
+input_digest: sha256:cd17bd131b22833e0322fbbc7e014324fa5d90e2b478ed7e0594247ac929276f
+command_digest: sha256:5a9aebd5b2664289a9b824939b66a594c690efb1e3e5bfc009b112ac40b6579a
+environment_digest: sha256:fc53bf906fda58b757cb9faab5b679876a1572abf11d9ac8a7c0ecfbed67ea0e
+exit_code: 0
+log_ref: artifacts/gates/EVD-20260804-002.txt
+log_digest: sha256:876d9c50fe8265cd822bc0bd3a0d96c3289477a1a9ce5830fcddbf302962e6eb
+valid_until: 2026-08-05T00:00:00+08:00
+links:
+  - rel: evidence_for
+    target: task:FX-20260804-002
+  - rel: observed_repo
+    target: repo:fixture-project/code
+---
+
+# Fresh passed evidence

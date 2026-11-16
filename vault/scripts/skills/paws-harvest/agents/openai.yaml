@@ -1,0 +1,6 @@
+interface:
+  display_name: "harvest"
+  short_description: "PAWS 知识萃取：从项目工件提炼有来源、有证据的可复用草稿"
+
+policy:
+  allow_implicit_invocation: false

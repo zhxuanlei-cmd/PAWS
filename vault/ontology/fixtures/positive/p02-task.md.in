@@ -1,0 +1,29 @@
+---
+schema_version: "1.1"
+type: task
+project: fixture-project
+status: done
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+task_id: FX-20260804-002
+title: 有 fresh Evidence 的 done WorkItem
+task_state: done
+generation: 3
+based_on: abc1234
+branch: codex/fx-20260804-002
+worktree_key: FX-20260804-002
+write_scope: [src/**]
+required_gates: [fast-tests]
+next_action: 无，任务已完成
+claim: null
+links:
+  - rel: changes
+    target: repo:fixture-project/code
+  - rel: governed_by
+    target: policy:fixture-project/default
+---
+
+# Done task with fresh evidence

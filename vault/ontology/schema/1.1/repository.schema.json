@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paws.local/schema/1.1/repository.schema.json",
+  "type": "object",
+  "allOf": [
+    {"$ref": "common.schema.json#/$defs/common"},
+    {
+      "type": "object",
+      "required": [
+        "repo_id",
+        "default_branch",
+        "path_hint",
+        "data_class",
+        "links"
+      ],
+      "properties": {
+        "type": {"const": "repository"},
+        "repo_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,62}/[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"
+        },
+        "default_branch": {"type": "string", "minLength": 1},
+        "path_hint": {"type": "string", "minLength": 1},
+        "data_class": {
+          "enum": ["public", "internal", "confidential", "restricted"]
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "common.schema.json#/$defs/link"}
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

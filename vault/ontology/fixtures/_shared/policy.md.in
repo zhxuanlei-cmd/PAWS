@@ -1,0 +1,29 @@
+---
+schema_version: "1.1"
+type: policy
+project: fixture-project
+status: active
+created: 2026-08-04
+updated: 2026-08-04
+tags: [fixture]
+source: G0 fixture
+draft: true
+policy_id: fixture-project/default
+project_code: FX
+consistency_mode: local_strong
+data_class: internal
+allowed_harnesses: [codex]
+allowed_providers: [fixture-provider]
+max_parallel_write_tasks: 1
+auto_commit: false
+auto_push: false
+gates:
+  fast-tests:
+    spec_version: 1
+    cwd_relative: .
+    command_argv: [fixture-test, --check]
+    input_globs: [src/**/*.txt]
+    environment_probes: [fixture-runtime, dependency-lock]
+---
+
+# Fixture Execution Policy

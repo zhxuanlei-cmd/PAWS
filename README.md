@@ -28,9 +28,9 @@ flowchart LR
 
 ## 项目交接演示
 
-用仓库里的 Markdown 标题检查器走一遍交接。Codex 手动保存 `/checkpoint` 后，独立终端按 `/start` 流程读回验证结果、未提交的修改和下一步，再运行缺少一级标题的反例。
+这段英文卡通动画取材于公开示例的实跑结果。用 `/checkpoint` 保存验证结果、未提交的修改和下一步，再用 `/start` 从同一项目接续。
 
-[![PAWS 交接演示 · 71 秒](docs/demo/paws-demo-cover.jpg)](docs/demo/paws-handoff-demo.mp4)
+[![PAWS 英文卡通交接演示 · 36 秒](docs/demo/paws-demo-cover.jpg)](docs/demo/paws-handoff-demo.mp4)
 
 [打开 MP4](docs/demo/paws-handoff-demo.mp4) · [运行示例](#快速体验)
 
